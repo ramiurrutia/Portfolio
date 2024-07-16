@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramiro Urrutia</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="code.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <header>
+      <nav class="nav">
+          <a class="nombre" href="index.html">Ramiro Urrutia</a>
+          <div class="linea"></div>
+          <div class="menu">
+              <a href="#about-me">SOBRE MI</a>
+              <a href="#...">...</a>
+              <a href="#contacto">CONTACTO</a>
+          </div>
+      </nav>
+  </header>
+
+  <section class="about-me" id="about-me">
+    <h2>Ramiro Urrutia</h2>
+    <p>Frontend Developer - Web Designer</p>
+    <div class="skills">
+        <div class="skill-item">
+            <div class="skill-content">
+                <span class="skill-text">HTML</span>
+                <img class="icon" src="img/html.png" alt="HTML">
+            </div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-content">
+                <span class="skill-text">CSS</span>
+                <img class="icon" src="img/css.png" alt="CSS">
+            </div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-content">
+                <span class="skill-text">JS</span>
+                <img class="icon" src="img/js.png" alt="JS">
+            </div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-content">
+                <span class="skill-text">REACT</span>
+                <img class="icon" src="img/react.png" alt="REACT">
+            </div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-content">
+                <span class="skill-text">C#</span>
+                <img class="icon" src="img/csharp.png" alt="CSHARP">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="trabajos" id="...">
+    <h2>...</h2>
+</section>
+
+<section class="contacto" id="contacto">
+    <h2>CONTACTO</h2>
+    <div class="redes-sociales">
+        <a href="https://www.linkedin.com/in/ramiro-urrutia-4598832aa/" target="_blank" class="fa fa-linkedin"></a>
+        <a href="https://www.github.com/ramiurrutia" target="_blank" class="fa fa-github"></a>
+        <a href="https://www.instagram.com/ramiiurrutiaa" target="_blank" class="fa fa-instagram"></a>
+    </div>
+
+    <form action="enviar.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" required>
+        
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" name="email" required>
+        
+        <label for="mensaje">Mensaje:</label>
+        <textarea name="mensaje" rows="4" required></textarea>
+        
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+
+</body>
+</html>

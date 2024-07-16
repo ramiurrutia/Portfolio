@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #678d82, #83aa9f, #87a49d);
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    color: rgb(0, 0, 0);
+    backdrop-filter: saturate(100%) blur(7px); /* Safari 6 - 9 and Chrome */
+    -webkit-backdrop-filter: saturate(100%) blur(7px ); /* Chrome, Safari 4 - 7 */
+}
+
+.nombre {
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: transparent; /* Hacer el texto transparente */
+    background: linear-gradient(to right, #d7fff5, #bbe3d8); /* Gradiente de colores */
+    background-clip: text; /* Aplicar el gradiente solo al texto */
+    -webkit-background-clip: text; /* Para navegadores basados en WebKit (como Chrome y Safari) */
+    text-decoration: none;
+    transition: all 0.2s ease-in;
+}
+
+.nombre:hover {
+    color: #d7fff5;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+}
+
+.nav::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+.nav h1, .menu a {
+    position: relative;
+    z-index: 1;
+}
+
+.menu a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #d7fff5;
+    text-decoration: none;
+    padding: 6px 15px;
+    margin: 0px 5px;
+    transition: 0.3s;
+    position: relative;
+}
+
+.menu a:hover {
+    color: #9fc6bc;
+}
+
+.menu {
+    padding: 10px;
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: calc(100vh);
+    overflow: hidden;
+    margin-bottom: 150px;
+    background-image: url(img/fondo-about-me.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    position: relative;
+}
+
+.about-me h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    color: transparent;
+    background: linear-gradient(to top, #d7fff5, #bbe3d8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    line-height: 1;
+}
+
+.about-me h2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #d7fff5;
+}
+
+.about-me p {
+    color: #d7fff5;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    margin: 2px 0px 0px 0px;
+    padding: 0;
+}
+
+.skill-content {
+    position: relative;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+.skill-text{
+    z-index: 1;
+    color: #d7fff5;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 5px;
+    line-height: 1.2;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.skill-item {
+    position: relative;
+    width: 75px;
+    height: 75px;
+    background-color: #678d82;
+    border: none;
+    border-radius: 8px;
+    margin: 0 10px;
+    transition: all 0.3s ease-in-out;
+    display: flex; /* Hacer que .skill-item sea un contenedor flex */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.skill-item:hover {
+    transform: scale(1.1);
+}
+
+.icon {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.trabajos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    position: relative;
+    z-index: 1; /* Ajustado el z-index */
+}
+
+.proyects {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    overflow-x: auto;
+    z-index: 0; /* Añadido z-index */
+}
+
+.trabajos h2{
+    font-size: 40px;
+    color: #d7fff5;
+    font-weight: 600;
+}
+
+.project-box {
+    width: 430px;
+    height: 300px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #83aa9f, #64887f);
+    margin: 0 10px;
+    position: relative;
+    z-index: 1; /* Ajustado el z-index */
+}
+
+.project-box h3 {
+    padding-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #d7fff5;
+}
+
+#dw img{
+    height: calc(100% - 50px);
+    border-radius: 10px;
+}
+
+.contacto {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px;
+    background-image: url(img/fondo-contacto.png);
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el fondo */
+    background-position: center; /* Centra la imagen en la sección */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.contacto h2 {
+    text-align: center;
+    font-size: 40px;
+    color: #d7fff5;
+    margin-bottom: 20px;
+}
+
+/* Añade estas reglas CSS para dar estilo a los iconos de Font Awesome */
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espaciado entre los iconos */
+}
+
+.redes-sociales a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d7fff5; /* Color de los iconos */
+    font-size: 30px; /* Tamaño de los iconos */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Efecto de transición al pasar el mouse */
+    background: #567c7148; /* Fondo oscuro */
+    border-radius: 8px; /* Radio de borde */
+    width: 40px; /* Ajusta según sea necesario */
+    height: 40px; /* Ajusta según sea necesario */
+}
+
+.redes-sociales a:hover {
+    color: #83aa9f; /* Color al pasar el mouse */
+}
+
+body::-webkit-scrollbar {
+    width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #83aa9f;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #678d82;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #bbe3d8;
+}
+
+form {
+    width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f4f400;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.137);
+    transition: width 0.5s ease;
+}
+
+form:focus-within {
+    width: 615px;
+}
+
+/* Estilos para las etiquetas */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 17px;
+    color: #d7fff5;
+}
+
+/* Estilos para los campos de entrada y textarea */
+input,
+textarea {
+    color: #d7fff5;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 0px double #9fc6bc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.178);
+    backdrop-filter: blur(5px); /* Aplica el efecto de desenfoque */
+    background-color: rgba(0, 0, 0, 0.041);
+    font-family: 'Poppins', sans-serif;
+}
+
+input,
+textarea:focus {
+    outline: none; /* Elimina el contorno predeterminado de enfoque */
+    border-color: #83aa9f; /* Cambia el color del borde cuando el textarea está enfocado */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.178); /* Agrega una sombra suave alrededor del textarea en enfoque */
+}
+
+/* Estilos para el botón de enviar */
+button {
+    background-color: transparent;
+    box-shadow: 0 0 5px rgba(133, 193, 166, 0.7);
+    font-family: 'Poppins', sans-serif;
+    color: #d7fff5;
+    font-weight: 600;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+    backdrop-filter: blur(5px);
+}
+
+button:hover {
+    background-color: #64887f;
+    color: #bbe3d8;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background: linear-gradient(to right, #83aa9f, #678d82);
+    }
+
+    .about-me {
+        height: auto;
+    }
+}
+
+/* Responsive Menu Styles */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #d7fff5;
+    margin: 5px 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
